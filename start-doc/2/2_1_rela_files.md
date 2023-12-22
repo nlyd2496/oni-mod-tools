@@ -11,6 +11,13 @@ description: "关于模组的一些描述"
 staticID: "MyFirstMod" # 模组的静态 ID ，可以任意命名，需要用英文字母
 ```
 
+`
+注意：
+除句末引号内的文字描述外，引号外的内容全部使用英文输入输入
+例："title"+":"+"空格"+"""+"文字”+“”“
+`
+
+
 `mod_info.yml`
 ```yaml
 supportedContent: ALL
