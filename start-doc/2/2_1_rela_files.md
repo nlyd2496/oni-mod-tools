@@ -4,38 +4,38 @@
 一个模组最起码有以下三个文件：编译后的文件、两个模组信息文件
 
 ### 模组信息文件
-`mod.yml`
+`mod.yaml`
 ```yaml
 title: "模组名称"
 description: "关于模组的一些描述"
-staticID: "MyFirstMod" # 模组的静态 ID ，可以任意命名，需要用英文字母
+staticID: "MyFirstMod" # 模组的静态 ID ，可以任意命名，需要用英文字母。此行描述非必要，可以不添加。
 ```
 
-`mod_info.yml`
+`mod_info.yaml`
 ```yaml
 supportedContent: ALL
 minimumSupportedBuild: 562984
 version: 1.0.0
 APIVersion: 2
 ```
-对于这几个字段，`supportedContent` 是指模组支持的游戏版本，可以填写以下几个值：
+对于这几个字段，`supportedContent ` 是指模组支持的游戏版本，参考以下示例：
 
-- `ALL` 表示支持原版以及所有 DLC
-- `EXPANSION1_ID` 表示仅支持 Space Out（眼冒金星） DLC
-- `VANILLA_ID` 表示仅支持原版游戏
+- `supportedContent: ALL` 表示支持原版以及所有 DLC
+- `supportedContent: EXPANSION1_ID` 表示仅支持 Space Out（眼冒金星） DLC
+- `supportedContent: VANILLA_ID` 表示仅支持原版游戏
 
-`minimumSupportedBuild` 表示最低能运行模组的版本，这个版本可以从游戏界面下方的代码中获取：
+`minimumSupportedBuild` 表示最低能运行模组的版本，这个版本可以从游戏界面下方的代码中获取（直接从能正常运行的mod中复制过来亦可，这种方法对于mod的后续维护有较低的可能会造成麻烦，）：
 ![oni-version](/oni-version.png)
 两个 `-` 之中的一串数字就是数字版本号。
 
-`version` 指的是该模组的版本，版本号可以是各种形式的，只是为了分辨模组是否需要更新。
+`version` 指的是该模组的版本，版本号可以是各种形式的，只是为了分辨模组是否需要更新。简单而言，发布第一个版本时，版本号为1.0；发布第二个版本时，版本号修改为2.0；发布第二个版本时，版本号修改为3.0；
 
 `APIVersion` 这个在缺氧正式更新到 Harmony2.0 之后就固定是 2 了，表示用的是 2.0 的 Harmony。
 
-### 模组文件夹中的可选文件夹
+### 模组文件夹中可额外添加的文件夹
 `assest`
 一般用于存放动画文件，动画文件整个存储在 'assest/anim' 文件夹下
-
+一般用于存放文本翻译文件，
 
 ## 游戏数据文件夹
 在你的 Steam 游戏库中，右键 `缺氧` -> `管理` -> `浏览本地文件` 接着在打开的文件资源管理器中进入`OxygenNotIncluded_Data` 文件夹，其中又有如下文件夹：
